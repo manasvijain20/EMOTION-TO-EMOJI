@@ -13,7 +13,7 @@ function take_snapshot(){
     })
 }
 console.log('ml5 version:', ml5.version);
-classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/5mxzZHkpx/model.json', modelLoaded);
+classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/2X4l3EH0a/model.json', modelLoaded);
 console.log(classifier);
 function modelLoaded(){
     console.log("model is loaded")
@@ -40,7 +40,7 @@ function gotResult(error, results){
     else{
         console.log(results);
         document.getElementById("result_emotion_name").innerHTML = results[0].label;
-        document.getElementById("result_emotion_name2").innerHTML = results[1].label
+        document.getElementById("result_emotion_name2").innerHTML = results[1].label;
         prediction_1 = results[0].label;
         prediction_2 = results[1].label;
         speak();
